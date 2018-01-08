@@ -8,14 +8,14 @@ const path = require('path');
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
-    './src/app.jsx' // this file along with dependency libs will be compiled into one file and loaded
+    './src/index.js' // this file along with dependency libs will be compiled into one file and loaded
       // See index.html, you will see bundle.js embedded
   ],
 
   // Production details
   output: {
     // When compiled for production, output file location
-    path: './src',
+    path: __dirname,
     publicPath: '/',
     filename: 'bundle.js' // Its convention to use this name
   },
